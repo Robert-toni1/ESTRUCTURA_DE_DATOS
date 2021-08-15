@@ -1,0 +1,24 @@
+#include"iostream"
+#include"conio.h"
+using namespace std;
+int main ()
+{
+	/////ENCONTRAR EL NUMERO MAYOR DE N NUMEOROS 
+	int n,numero,mayor=0;
+	cout<<"ingresar el limite : "<<endl;
+	cin>>n;
+	int i=0;
+	while(i<n)
+	{
+		cout<<"ingresar un numero : "<<endl;
+		cin>>numero;
+		if(mayor<numero)
+		{
+			mayor=numero;
+		}
+		i++;
+	}
+	cout<<"El numero mayor es : "<<mayor<<endl;
+	getch();
+	return 0;
+}
