@@ -1,0 +1,15 @@
+#include"iostream"
+#include"conio.h"
+using namespace std;
+int main ()
+{
+	float b,h,area;
+	cout<<"ingresar la base del rectangulo : "<<endl;
+	cin>>b;
+	cout<<"ingresar la altura del rectangulo : "<<endl,
+	cin>>h;
+	area=b*h;
+	cout<<"AREA = "<<area<<endl;
+	getch();
+	return 0
+}
