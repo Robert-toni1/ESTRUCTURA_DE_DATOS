@@ -1,0 +1,153 @@
+#include<iostream>
+#include"conio.h"
+#include"math.h"
+
+using namespace std;
+
+int circulo();
+int inv();
+void fibo();
+int rectangulo();
+int hipotenusa();
+
+
+int main()
+{
+	int opc;
+	
+	do{
+	
+	cout<<"\t| ******************MENU********************|"<<endl;
+	cout<<"\t| 1.- calcular el area de un circulo        |"<<endl;
+	cout<<"\t| 2.- calcular el invertir un numero        |"<<endl;
+	cout<<"\t| 3.- serie fibonacci                       |"<<endl;
+	cout<<"\t| 4.- Area de un rectaangulo                |"<<endl;
+	cout<<"\t| 5.- hipotenusa de un triangulo rectangulo |"<<endl;
+	cout<<"\t| 6.- salir...                              |"<<endl;
+///	cout<<"\t| 6.- salir...                              |"<<endl;
+	
+	cin>>opc;
+	
+	switch(opc)
+	{
+		case 1:    //// Area de circulo
+			{
+				int  k=circulo();
+				cout<<"Area = "<<k;
+				
+			}break;
+			
+		case 2:    ///invertir un numero
+			{
+				
+			int p=inv();
+			cout<<"numero invertido es : "<<p<<endl;
+			
+			}break;
+			
+		case 3:    //serie
+			{
+			    fibo();
+			}
+			
+		case 4:    ///Area de un rectangulo
+			{
+				
+				int h=rectangulo();
+				
+			}break;
+			
+		case 5:
+		{
+			int f=hipotenusa();
+			cout<<f<<endl;
+		}break;	
+			
+		case 6:
+		{
+			cout<<"salir.."<<endl;
+			
+		}break;	
+				
+	     default: cout<<" El numero ingresado no esta en el rango de 1 - 5 "<<endl;break;
+	 }
+	
+	
+	
+    }while(opc!=6);
+    getch ();	
+	return 0;
+}
+
+int circulo()
+{
+	float r,res;
+	cout<<"ingresar el radio de circulo : "<<endl;
+	cin>>r;
+	res=3.1416*pow(r,2);
+	///cout<<"Area = "<<res<<endl;
+	return res;
+}
+
+
+int inv()
+{
+	int dig,n,nuevo=0;
+	  cout<<"ingresar un numero para invertirlo: "<<endl;
+	       cin>>n;
+	         while(n>0)	
+	           {
+	 	         dig=n%10;
+	              nuevo=(nuevo*10)+dig;
+	 	           n=n/10;
+	 	
+	            }
+	            //cout<<"el numero invertido es :"<<nuevo<<endl;
+	            return nuevo;
+	
+}
+
+void fibo()
+{
+	int n;
+	  int a=1,b=0,c=0;
+	   cout<<"ingresar el limite  : "<<endl;
+	       cin>>n;
+              
+	        cout<<"0"<<endl;
+             	for(int i=0;i<(n-1);i++)
+                  	{
+	                 	c=a+b;
+	                  	 cout<<c<<endl;;
+	                   	a=b;
+	                 	 b=c;
+                   	}
+                     	
+}
+
+
+int rectangulo()
+{
+	
+	float b,h,area;
+		cout<<"ingresar la base : "<<endl;
+		cin>>b;
+		cout<<"ingresar al altura : "<<endl;
+		cin>>h;
+		area=b*h;
+		cout<<"Area = "<<area<<endl;
+		
+	return area;
+}
+
+int hipotenusa()
+{
+	float o,a,k;
+			cout<<"ingresar el cateto opuesto del triangulo : "<<endl;
+			cin>>o;
+			cout<<"ingresar el cateto adiacente del triangulo : "<<endl;
+			cin>>a;
+			k=sqrt(pow(o,2)+pow(a,2));
+			cout<<"Hipotenusa = "<<k<<endl;
+}
+
